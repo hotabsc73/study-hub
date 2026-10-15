@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import study.task2.StringBuilderClient;
 import study.task2.TestLogParser;
 
 public class ApplicationMain {
@@ -19,6 +20,11 @@ public class ApplicationMain {
     System.out.println("\n");
     System.out.println("call java-core-task-1");
     printTestsLog();
+
+    System.out.println("\n");
+    System.out.println("call java-core-task-1-2");
+    StringBuilderClient.use();
+
   }
 
   private static void printTestsLog() {
