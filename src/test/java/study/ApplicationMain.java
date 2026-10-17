@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import study.task2.StringBuilderClient;
 import study.task2.TestLogParser;
+import study.task3.FlakyDetector;
+import study.task3.FrequencyTest;
 
 public class ApplicationMain {
 
@@ -25,6 +27,26 @@ public class ApplicationMain {
     System.out.println("call java-core-task-1-2");
     StringBuilderClient.use();
 
+    System.out.println("\n");
+    System.out.println("call java-core-task-3");
+    List<String> run1 = List.of(
+        "LoginTest|PASSED",
+        "CreateTaskTest|FAILED",
+        "CommentTest|FAILED",
+        "LogoutTest|PASSED"
+    );
+    List<String> run2 = List.of(
+        "LoginTest|PASSED",
+        "CreateTaskTest|PASSED",
+        "CommentTest|FAILED",
+        "StatsTest|PASSED"
+    );
+    System.out.println("Flaky-кандидаты: " + FlakyDetector.flaky(run1, run2));
+    System.out.println("Прогон 2, сводка: " + FlakyDetector.statusSummary(run2));
+    String[] words = {"up", "down", "up", "up", "left"};
+    Integer[] numbers = {3, 1, 3, 3, 7, 1};
+    System.out.println("frequency: " + FrequencyTest.frequency(words));
+    System.out.println("frequency: " + FrequencyTest.frequency(numbers));
   }
 
   private static void printTestsLog() {
