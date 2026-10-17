@@ -1,0 +1,3 @@
+package study;
+
+public record TestStep(String id, String methodName, int order){}
