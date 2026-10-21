@@ -11,6 +11,7 @@ import study.task2.StringBuilderClient;
 import study.task2.TestLogParser;
 import study.task3.FlakyDetector;
 import study.task3.FrequencyTest;
+import study.task5.ParallelRunner;
 
 public class ApplicationMain {
 
@@ -47,6 +48,10 @@ public class ApplicationMain {
     Integer[] numbers = {3, 1, 3, 3, 7, 1};
     System.out.println("frequency: " + FrequencyTest.frequency(words));
     System.out.println("frequency: " + FrequencyTest.frequency(numbers));
+
+    System.out.println("\n");
+    System.out.println("call java-core-task-5");
+    ParallelRunner.run();
   }
 
   private static void printTestsLog() {
