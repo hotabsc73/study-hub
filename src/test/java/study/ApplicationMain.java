@@ -15,6 +15,8 @@ import study.task3.FlakyDetector;
 import study.task3.FrequencyTest;
 import study.task4.Task4;
 import study.task4.Task4Add;
+import study.task5.DataAggregator;
+import study.task5.ParallelRunner;
 
 public class ApplicationMain {
 
@@ -64,6 +66,11 @@ public class ApplicationMain {
     );
     Task4.printSummary(run4);
     Task4Add.test();
+
+    System.out.println("\ncall java-core-task-5");
+    ParallelRunner.run();
+    System.out.println("\n\ncall java-core-task-5-2");
+    System.out.println(DataAggregator.aggregateProductInfo("Ноутбук"));
   }
 
   private static void printTestsLog() {
